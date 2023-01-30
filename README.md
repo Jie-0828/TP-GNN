@@ -30,13 +30,16 @@ scikit-learn==0.24.2
 ### Command and configurations
 
 #### Sample commend
-* Learning the network using link prediction tasks
+* Learning the down-stream task (graph-classification)
 ```{bash}
-# t-gat learning on wikipedia data
-python -u learn_edge.py -d wikipedia --bs 200 --uniform  --n_degree 20 --agg_method attn --attn_mode prod --gpu 0 --n_head 2 --prefix hello_world
+# on Forum-java
+python -u train_graph.py -d Forum-java --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
 
-# t-gat learning on reddit data
-python -u learn_edge.py -d reddit --bs 200 --uniform  --n_degree 20 --agg_method attn --attn_mode prod --gpu 0 --n_head 2 --prefix hello_world
+# on HDFS
+python -u train_graph.py -d HDFS --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
+
+# on Gowalla
+python -u train_graph.py -d Gowalla --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
 ```
 
 * Learning the down-stream task (node-classification)
@@ -44,11 +47,14 @@ python -u learn_edge.py -d reddit --bs 200 --uniform  --n_degree 20 --agg_method
 Node-classification task reuses the network trained previously. Make sure the `prefix` is the same so that the checkpoint can be found under `saved_models`.
 
 ```{bash}
-# on wikipedia
-python -u learn_node.py -d wikipedia --bs 100 --uniform  --n_degree 20 --agg_method attn --attn_mode prod --gpu 0 --n_head 2 --prefix hello_world
+#on MOOC
+python -u train_node.py -d MOOC --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
 
-# on reddit
-python -u learn_node.py -d reddit --bs 100 --uniform  --n_degree 20 --agg_method attn --attn_mode prod --gpu 0 --n_head 2 --prefix hello_world
+# on Wikipedia
+python -u train_node.py -d Wikipedia --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
+
+# on Reddit
+python -u train_node.py -d Reddit --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
 ```
 
 #### General flags
