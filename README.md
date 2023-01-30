@@ -55,24 +55,11 @@ python -u learn_node.py -d reddit --bs 100 --uniform  --n_degree 20 --agg_method
 
 ```{txt}
 optional arguments:
-  -h, --help            show this help message and exit
-  -d DATA, --data DATA  data sources to use, try wikipedia or reddit
-  --bs BS               batch_size
-  --prefix PREFIX       prefix to name the checkpoints
-  --n_degree N_DEGREE   number of neighbors to sample
-  --n_head N_HEAD       number of heads used in attention layer
-  --n_epoch N_EPOCH     number of epochs
-  --n_layer N_LAYER     number of network layers
-  --lr LR               learning rate
-  --drop_out DROP_OUT   dropout probability
-  --gpu GPU             idx for the gpu to use
-  --node_dim NODE_DIM   Dimentions of the node embedding
-  --time_dim TIME_DIM   Dimentions of the time embedding
-  --agg_method {attn,lstm,mean}
-                        local aggregation method
-  --attn_mode {prod,map}
-                        use dot product attention or mapping based
-  --time {time,pos,empty}
-                        how to use time information
-  --uniform             take uniform sampling from temporal neighbors
+  -d DATA, --data DATA                       data sources to use
+  --bs BS                                    batch_size
+  --n_epoch N_EPOCH                          number of epochs
+  --lr LR                                    learning rate
+  --node_dim NODE_DIM                        dimentions of the node embedding
+  --edge_agg {mean,had,w1,w2,activate}       EdgeAgg method
+  --divide                                   the ratio of training sets
 ```
