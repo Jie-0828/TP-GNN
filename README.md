@@ -7,7 +7,11 @@
 
 ### Dataset and preprocessing
 
-#### Download the public data
+### Download the public data
+* [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
+
+* [HDFS]()
+
 * [Reddit](http://snap.stanford.edu/jodie/reddit.csv)
 
 * [Wikipedia](http://snap.stanford.edu/jodie/wikipedia.csv)
