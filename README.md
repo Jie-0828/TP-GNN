@@ -2,7 +2,7 @@
 <!--#### -->
 ## Introduction
 #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX)
-![Framework](framework.png?raw=true "Network Framework")
+![Framework](framework.png raw=true "Network Framework")
 ## Running the experiments
 
 ### Dataset and preprocessing
