@@ -1,3 +1,4 @@
+![framework](https://user-images.githubusercontent.com/105060483/215426102-45c1c364-bd0d-4cbe-98c7-242c2d731b86.png)
 # TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification
 <!--#### -->
 ## Introduction
