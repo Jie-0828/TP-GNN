@@ -111,7 +111,7 @@ for count in tqdm(range(math.ceil(len(list_test) / batch_size))):
     max_vali_f1 = 0
     if len(list_test[num:num + batch_size]) == batch_size:
         for file in list_test[num:num + batch_size]:
-            labels_test, predicts_test ,score= evaluate(file, dict_test_file, model_time, classification, rnn_model, edge_agg, device, 'debug', epoch, hidden_size)
+            labels_test, predicts_test ,score= evaluate(file, dict_test_file, model_time, classification, rnn_model, edge_agg, device, hidden_size)
             predicts_socre_all.append(score)
             for label in labels_test:
                 labels_test_all.append(label)
