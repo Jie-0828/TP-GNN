@@ -69,7 +69,7 @@ print('Model with Supervised Learning')
 
 for epoch in tqdm(range(epochs)):
     new_feat_data=features.clone()
-    print(optimizer.state_dict()['param_groups'][0]['lr'])
+#     print(optimizer.state_dict()['param_groups'][0]['lr'])
     time.sleep(0.0001)
     print('----------------------EPOCH %d-----------------------' % epoch)
     model_time, classification,time_model,loss = apply_model(new_feat_data,dict_edge,train_index,labels,model_time,rnn_model,classification,optimizer,edge_agg,device,hidden_size)
@@ -79,9 +79,7 @@ for epoch in tqdm(range(epochs)):
 predicts, labels_, predicts_score = evaluate(features,dict_edge,labels,test_index,model_time,classification,rnn_model,edge_agg,device,hidden_size)
 
 labels = np.array(labels_)
-print(labels)
 scores = np.array(predicts)
-print(scores)
 
 TP = 0
 FP = 0
