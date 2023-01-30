@@ -10,7 +10,7 @@
 ### Download the public data
 * [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
 
-* [HDFS]()
+* [HDFS](https://doi.org/10.5281/zenodo.1144100)
 
 * [Reddit](http://snap.stanford.edu/jodie/reddit.csv)
 
