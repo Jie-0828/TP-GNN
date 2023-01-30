@@ -36,7 +36,7 @@ torch.cuda.manual_seed_all(seed)
 
 # Load dataset
 if dataset == 'MOOC':
-    path = r'D:\360MoveData\Users\Asus\Desktop\example.csv'  # dataset path
+    path = r''  # dataset path
 elif dataset == 'Wikipedia':
     path = ''
 elif dataset == 'Reddit':
