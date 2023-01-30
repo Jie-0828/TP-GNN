@@ -1,6 +1,11 @@
 # TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification
 <!--#### -->
 ## Introduction
+Anomaly detection has been an important problem which asks to identify systems whose behaviours deviate significantly from expectations. In general, system behaviours
+can be characterised by the interactions among system components and their sequence. Therefore, a dynamic network model can be established to capture these interactions. In this way, anomaly detection reduces to a classification task that seeks to identify “anomalous dynamic network” from the “standard” ones. 
+In this paper, we propose Temporal propagation-Graph Convolutional Neural Network (TP-GCN). The model extracts the temporal information and structure information from the dynamic network to realize the final classification task. TP-GCN contains two components: 1)temporal propagation; 2)global temporal information embedding, which involves a novel way of message propagation.
+The proposed approach handles both node classification and graph classification task, and has good performance.
+
 #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX)
 ![framework](https://user-images.githubusercontent.com/105060483/215426102-45c1c364-bd0d-4cbe-98c7-242c2d731b86.png "The framework of TP-GCN")
 ## Running the experiments
