@@ -45,8 +45,8 @@ if dataset == 'Forum-java':
     path_negative = ''  # Negative sample path
 elif dataset == 'HDFS':
     dimensionality = 4
-    path_positive = r'D:\360MoveData\Users\Asus\Desktop\测试\p'
-    path_negative = r'D:\360MoveData\Users\Asus\Desktop\测试\n'
+    path_positive = ''
+    path_negative = ''
 elif dataset == 'Gowalla':
     dimensionality = 3
     path_positive = ''
