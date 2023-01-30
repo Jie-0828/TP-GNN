@@ -14,7 +14,7 @@ The proposed approach handles both node classification and graph classification 
 
 ### Dataset and preprocessing
 
-### Download the public data
+#### Download the public data
 * [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
 
 * [HDFS](https://doi.org/10.5281/zenodo.1144100)
@@ -24,6 +24,9 @@ The proposed approach handles both node classification and graph classification 
 * [Wikipedia](http://snap.stanford.edu/jodie/wikipedia.csv)
 
 * [MOOC](http://snap.stanford.edu/jodie/mooc.csv)
+
+#### Use your own data
+See example(https://github.com/TP-GCN/TP-GCN/edit/main/example) for the required input data format.
 
 ### Requirements
 
