@@ -1,7 +1,7 @@
 # TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification
 <!--#### -->
 ## Introduction
-#### Paper link: [Inductive Representation Learning on Temporal Graphs](https://openreview.net/pdf?id=rJeW1yHYwH)
+#### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX)
 ![Framework](framework.png?raw=true "Network Framework")
 ## Running the experiments
 
@@ -12,18 +12,19 @@
 
 * [Wikipedia](http://snap.stanford.edu/jodie/wikipedia.csv)
 
+* [MOOC](http://snap.stanford.edu/jodie/mooc.csv)
+
 ### Requirements
 
-* python >= 3.7
+* python >= 3.9
 
 * Dependency
 
 ```{bash}
-pandas==0.24.2
-torch==1.1.0
-tqdm==4.41.1
-numpy==1.16.4
-scikit_learn==0.22.1
+torch==1.12.0
+tqdm==4.64.0
+numpy==1.18.5
+scikit-learn==0.24.2
 ```
 
 ### Command and configurations
