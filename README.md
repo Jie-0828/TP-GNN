@@ -9,7 +9,7 @@ In this paper, we propose Temporal propagation-Graph Convolutional Neural Networ
 The proposed approach handles both node classification and graph classification task, and has good performance.
 
 #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX)
-![framework](https://user-images.githubusercontent.com/105060483/215426102-45c1c364-bd0d-4cbe-98c7-242c2d731b86.png "The framework of TP-GCN")
+![framework](https://user-images.githubusercontent.com/105060483/215464318-dbec7501-2d41-4209-9c99-2200d2d5c1a8.png "The framework of TP-GCN")
 ## Running the experiments
 
 ### Dataset and preprocessing
