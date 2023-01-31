@@ -9,12 +9,12 @@ In this paper, we propose Temporal propagation-Graph Convolutional Neural Networ
 The proposed approach handles both node classification and graph classification task, and has good performance.
 
 <!-- #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX) -->
-![framework](https://user-images.githubusercontent.com/105060483/215464318-dbec7501-2d41-4209-9c99-2200d2d5c1a8.png "The framework of TP-GCN")
+![framework](https://user-images.githubusercontent.com/105060483/215789371-f3203ecb-9ec7-450f-9b72-bce5d10e7ac7.png "The framework of TP-GCN")
 ## Running the experiments
 
 ### Dataset and preprocessing
 
-#### Download the public data
+#### Download the public dataset
 * [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
 
 * [HDFS](https://doi.org/10.5281/zenodo.1144100)
@@ -24,6 +24,9 @@ The proposed approach handles both node classification and graph classification 
 * [Wikipedia](http://snap.stanford.edu/jodie/wikipedia.csv)
 
 * [MOOC](http://snap.stanford.edu/jodie/mooc.csv)
+
+#### Download the Forum-java dataset
+As for the Fourm-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/dataset) folder
 
 #### Use your own data
 See [example](https://github.com/TP-GCN/TP-GCN/edit/main/example) for the required input data format.
