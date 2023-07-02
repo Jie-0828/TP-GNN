@@ -15,15 +15,11 @@ The proposed approach handles both node classification and graph classification 
 ### Dataset and preprocessing
 
 #### Download the public dataset
-* [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
-
 * [HDFS](https://doi.org/10.5281/zenodo.1144100)
-
-* [Reddit](http://snap.stanford.edu/jodie/reddit.csv)
-
-* [Wikipedia](http://snap.stanford.edu/jodie/wikipedia.csv)
-
-* [MOOC](http://snap.stanford.edu/jodie/mooc.csv)
+* 
+* [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
+* 
+* [Brightkite]http://snap.stanford.edu/data/loc-brightkite.html
 
 #### Download the Forum-java dataset
 As for the Fourm-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/dataset) folder
@@ -57,21 +53,6 @@ python -u train_graph.py -d HDFS --bs 32  --n_dim 32 --edge_agg mean --divide 0.
 
 # on Gowalla
 python -u train_graph.py -d Gowalla --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
-```
-
-* Learning the down-stream task (node-classification)
-
-Node-classification task reuses the network trained previously. Make sure the `prefix` is the same so that the checkpoint can be found under `saved_models`.
-
-```{bash}
-#on MOOC
-python -u train_node.py -d MOOC --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
-
-# on Wikipedia
-python -u train_node.py -d Wikipedia --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
-
-# on Reddit
-python -u train_node.py -d Reddit --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
 ```
 
 #### General flags
