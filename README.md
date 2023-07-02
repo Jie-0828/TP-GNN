@@ -20,10 +20,10 @@ The proposed approach handles both node classification and graph classification 
 * 
 * [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
 * 
-* [Brightkite]http://snap.stanford.edu/data/loc-brightkite.html
+* [Brightkite](http://snap.stanford.edu/data/loc-brightkite.html)
 
 #### Download the Forum-java dataset
-As for the Fourm-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/dataset) folder
+As for the Forum-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/dataset) folder
 
 #### Use your own data
 See [example](https://github.com/TP-GCN/TP-GCN/edit/main/example) for the required input data format.
