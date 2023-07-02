@@ -44,16 +44,16 @@ scikit-learn==0.24.2
 ### Command and configurations
 
 #### Sample commend
-* Learning the down-stream task (graph-classification)
+* Learning the anomaly detection task
 ```{bash}
 # on Forum-java
-python -u train_graph.py -d Forum-java --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
+python -u train_graph.py -d Forum-java --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
 
 # on HDFS
-python -u train_graph.py -d HDFS --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
+python -u train_graph.py -d HDFS --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
 
 # on Gowalla
-python -u train_graph.py -d Gowalla --bs 32  --n_dim 32 --edge_agg mean --divide 0.3
+python -u train_graph.py -d Gowalla --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
 ```
 
 #### General flags
@@ -64,7 +64,9 @@ optional arguments:
   --bs BS                                    batch_size
   --n_epoch N_EPOCH                          number of epochs
   --lr LR                                    learning rate
-  --node_dim NODE_DIM                        dimentions of the node embedding
+  --node_dim NODE_DIM                        dimensions of the GRU hidden size
+  --time_dim TIME_DIM                        dimensions of the time embedding
   --edge_agg {mean,had,w1,w2,activate}       EdgeAgg method
   --divide                                   the ratio of training sets
+  --updater                                  message passing way of temporal propagation
 ```
