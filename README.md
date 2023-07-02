@@ -1,12 +1,11 @@
 # TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification
 <!--#### -->
 ## Introduction
-Anomaly detection has been an important problem which asks to identify systems whose behaviours deviate significantly from expectations. In general, system behaviours
-can be characterised by the interactions among system components and their sequence. Therefore, a dynamic network model can be established to capture these interactions. In this way, anomaly detection reduces to a classification task that seeks to identify “anomalous dynamic network” from the “standard” ones.
+Anomaly detection is an important task to improve the security of web services, and it has practical applications in software maintenance and social networks. This task can be define as the process of identifying abnormal data points or samples in web service data. By representing web service data with temporal attributes as a dynamic network that changes over time, the dynamic behavior of a system or user can be fully described. In this way, the anomaly detection task in web services can be transformed into a graph classification task in dynamic network that seeks to identify “anomalous dynamic network” from the “standard” ones. 
 
-In this paper, we propose Temporal propagation-Graph Convolutional Neural Network (TP-GCN). The model extracts the temporal information and structure information from the dynamic network to realize the final classification task. TP-GCN contains two components: 1)temporal propagation; 2)global temporal information embedding, which involves a novel way of message propagation.
+In this paper, we propose Temporal propagation-Graph Convolutional Neural Network (TP-GCN). The model extracts the temporal information and structure information from the dynamic network to realize the final anomaly detection in web services. TP-GCN contains two components: 1)temporal propagation; 2)global temporal embedding, which involves a novel way of message propagation.
 
-The proposed approach handles both node classification and graph classification task, and has good performance.
+The proposed approach handles both anomaly detection task and has good performance.
 
 <!-- #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX) -->
 ![framework](https://github.com/TP-GCN/TP-GCN/assets/105060483/22d5d993-3fca-4bc1-bb1f-3ca981393db1 "The framework of TP-GCN")
