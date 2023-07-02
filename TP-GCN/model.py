@@ -1,4 +1,3 @@
-import networkx as nx
 import numpy as np
 import torch
 import torch.nn as nn
@@ -56,12 +55,10 @@ class Model(nn.Module):
 
     def get_nodes_embedding_matrix(self, self_feats, edge_order):
         dict_time = {}  # Record the time of the last interaction
-        G = nx.Graph()
         time_mx = torch.zeros(len(self_feats), self.time_dim)  # Initial temporal matrix
 
         for node in range(len(self_feats)):
             dict_time[node] = 0  # Initialize the interaction time
-            G.add_node(node)
 
         dict_edge={}
         for edge in edge_order:
@@ -76,8 +73,6 @@ class Model(nn.Module):
             target_nodes = []
             for edge in edges:
                 a_t[edge[1], edge[0]] += 1
-                G.add_edge(int(edge[1]), int(edge[0]))
-                G.add_edge(int(edge[0]), int(edge[1]))
                 target_nodes.append(int(edge[1]))
 
             a_t = torch.tensor(normalize(a_t))
