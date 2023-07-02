@@ -17,9 +17,9 @@ The proposed approach handles both node classification and graph classification 
 
 #### Download the public dataset
 * [HDFS](https://doi.org/10.5281/zenodo.1144100)
-* 
+  
 * [Gowalla](https://snap.stanford.edu/data/loc-gowalla.html)
-* 
+  
 * [Brightkite](http://snap.stanford.edu/data/loc-brightkite.html)
 
 #### Download the Forum-java dataset
