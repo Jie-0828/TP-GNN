@@ -8,8 +8,9 @@ In this paper, we propose Temporal propagation-Graph Convolutional Neural Networ
 The proposed approach handles both anomaly detection task and has good performance.
 
 <!-- #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX) -->
-![framework](https://github.com/TP-GCN/TP-GCN/assets/105060483/22d5d993-3fca-4bc1-bb1f-3ca981393db1 "The framework of TP-GCN")
+![framework](https://github.com/Jie-0828/TP-GCN/assets/105060483/a6197b72-dd91-490c-9f59-9bfa64adeb83 "The framework of TP-GCN")
 ## Running the experiments
+
 
 
 ### Dataset and preprocessing
