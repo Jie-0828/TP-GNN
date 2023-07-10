@@ -15,6 +15,5 @@ contents included:
   -nodeInfo=
    node idx: features
 ```
-All time label starts from `1`.
 
 
