@@ -47,13 +47,16 @@ scikit-learn==0.24.2
 * Learning the anomaly detection task
 ```{bash}
 # on Forum-java
-python -u train_graph.py -d Forum-java --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
+python -u train_graph.py -d Forum-java --bs 32 --n_epoch 10 --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
 
 # on HDFS
-python -u train_graph.py -d HDFS --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
+python -u train_graph.py -d HDFS --bs 32 --n_epoch 10 --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
 
 # on Gowalla
-python -u train_graph.py -d Gowalla --bs 32  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater gru
+python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
+
+# on Brightkite
+python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
 ```
 
 #### General flags
