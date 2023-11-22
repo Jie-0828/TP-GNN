@@ -23,7 +23,7 @@ The proposed approach handles the graph classification task on four different da
 * [Brightkite](http://snap.stanford.edu/data/loc-brightkite.html)
 
 #### Download the Forum-java dataset
-As for the Forum-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/dataset) folder
+As for the Forum-java dataset we created in the paper, its contents are available in the [dataset](https://github.com/TP-GCN/TP-GCN/edit/main/Dataset/Forum-java) folder
 
 #### Use your own data
 See [example](https://github.com/TP-GCN/TP-GCN/edit/main/example) for the required input data format.
