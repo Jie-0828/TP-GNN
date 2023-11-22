@@ -1,14 +1,14 @@
-# TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification
+# TP-GCN: Continuous Dynamic Graph Neural Network for Graph Classification
 <!--#### -->
 ## Introduction
-Anomaly detection is an important task to improve the security of web services, and it has practical applications in software maintenance and social networks. This task can be define as the process of identifying abnormal data points or samples in web service data. By representing web service data with temporal attributes as a dynamic network that changes over time, the dynamic behavior of a system or user can be fully described. In this way, the anomaly detection task in web services can be transformed into a graph classification task in dynamic network that seeks to identify “anomalous dynamic network” from the “standard” ones. 
+Graph-level analysis is commonly needed in real-world dynamic networks. For instance, system logs provide comprehensive insights into the operational behaviors of a system. However, the existing DGNNs are only designed for node- or edge-level tasks. To the best of our knowledge, no existing solution is available for graph-level tasks in dynamic networks.
 
-In this paper, we propose Temporal propagation-Graph Convolutional Neural Network (TP-GCN). The model extracts the temporal information and structure information from the dynamic network to realize the final anomaly detection in web services. TP-GCN contains two components: 1)temporal propagation; 2)global temporal embedding, which involves a novel way of message propagation.
+In this paper, we propose a continuous dynamic graph neural network --TP-GCN, intended for graph classification in dynamic networks, which compass two primary components: (1)Temporal propagation: this method follows the direction of information flow in capturing the long dependencies within the dynamic networks. In this way, the learned representations of the nodes encode distinct temporal features for different graph classes. (2)Global Temporal Embedding Extractor: The extractor inputs the edges into the GRU according to the temporal order in which they are established in the network to learn the evolution process of network topology over time for accurate dynamic network analytics.
 
-The proposed approach handles both anomaly detection task and has good performance.
+The proposed approach handles the graph classification task on four different datasets and has good performance.
 
-<!-- #### Paper link: [TP-GCN: Dynamic Network Representation Learning for Graph and Node Classification](https://XXX) -->
-![framework](https://github.com/Jie-0828/TP-GCN/assets/105060483/a6197b72-dd91-490c-9f59-9bfa64adeb83 "The framework of TP-GCN")
+<!-- #### Paper link: [TP-GCN: Continuous Dynamic Graph Neural Network for Graph Classification](https://XXX) -->
+![framework](framework.png "The framework of TP-GCN")
 ## Running the experiments
 
 
@@ -47,16 +47,16 @@ scikit-learn==0.24.2
 * Learning the anomaly detection task
 ```{bash}
 # on Forum-java
-python -u train_graph.py -d Forum-java --bs 32 --n_epoch 10 --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
+python -u train_graph.py -d Forum-java --bs 32 --n_epoch 10 --lr 0.01 --node_dim 32 --time_dim 6 --edge_agg mean --divide 0.3 --updater sum
 
 # on HDFS
-python -u train_graph.py -d HDFS --bs 32 --n_epoch 10 --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
+python -u train_graph.py -d HDFS --bs 32 --n_epoch 10 --lr 0.01 --node_dim 32 --time_dim 6 --edge_agg mean --divide 0.3 --updater sum
 
 # on Gowalla
-python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001  --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
+python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001  --node_dim 32 --time_dim 6 --edge_agg mean --divide 0.3 --updater sum
 
 # on Brightkite
-python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001 --node_dim 32 --time_dim 8 --edge_agg mean --divide 0.3 --updater sum
+python -u train_graph.py -d Gowalla --bs 32 --n_epoch 10  --lr 0.001 --node_dim 32 --time_dim 6 --edge_agg mean --divide 0.3 --updater sum
 ```
 
 #### General flags
