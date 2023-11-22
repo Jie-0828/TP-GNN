@@ -42,8 +42,8 @@ if torch.cuda.is_available():
 # Load dataset
 if args.data == 'Forum-java':
     dimensionality = 3
-    path_positive = r'C:\Users\Administrator\Desktop\测试\p'  # Positive sample path
-    path_negative = r'C:\Users\Administrator\Desktop\测试\n'  # Negative sample path
+    path_positive = r'C:\Users\Administrator\Desktop\test\p'  # Positive sample path
+    path_negative = r'C:\Users\Administrator\Desktop\test\n'  # Negative sample path
 elif args.data == 'HDFS':
     dimensionality = 3
     path_positive = r''
@@ -72,7 +72,7 @@ else:
     time_model= nn.GRU(input_size=dimensionality+args.time_dim, hidden_size=hidden_size, num_layers=1, batch_first=True).to(device)
 classification = Classification(hidden_size, num_labels).to(device) # Create a classifier
 
-#加载数据集
+#load datasets
 train_dataset = DealDataset(list_train,dimensionality,args.time_dim,args.updater)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True,collate_fn=collate_func)
 # train_loader = DataLoader(train_dataset, batch_size=batch_size, num_workers=0, shuffle=True, collate_fn=collate_func)
