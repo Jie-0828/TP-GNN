@@ -22,7 +22,7 @@ parser.add_argument('--node_dim', type=int, default=32, help='Dimentions of the 
 parser.add_argument('--time_dim', type=int, default=4, help='Dimentions of the time embedding')
 parser.add_argument('--edge_agg', type=str, choices=['mean', 'had', 'w1','w2', 'activate'], help='EdgeAgg method', default='mean')
 parser.add_argument('--train_radio', type=str,help='the ratio of training sets', default=0.3)
-parser.add_argument('--updater', type=str,default='sum', help='Node feature update mode: [sum, gru,matrix]')
+parser.add_argument('--updater', type=str,default='sum', help='Node feature update mode: [sum, gru]')
 
 
 args = parser.parse_args()
