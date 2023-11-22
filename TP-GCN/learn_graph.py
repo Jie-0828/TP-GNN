@@ -28,7 +28,7 @@ def evaluate(test_loader,model_time, classification,time_model, edge_agg, device
             print(batch)
             feat, labels, edges, ids, lengths = batch['feature'], batch['label'], batch['edge'], batch['id'], batch[
                 'length']
-            for index in range(len(feat)):  # 一张图
+            for index in range(len(feat)):  # one graph
                 length_i = lengths[index]
                 feature = feat[index][:length_i[0]].to(device)
                 edge_test = edges[index][:length_i[1]].to(device)
