@@ -52,7 +52,7 @@ def train_model(loader,model_time, classification,embedding_layer,optimizer,time
     grouped_list = [keys[i:i + batch_size] for i in range(0, len(dict_train), batch_size)]
     pbar = tqdm(enumerate(grouped_list), total =len(grouped_list))
     for step, batch in pbar:
-        loss=0 #一批的loss
+        loss=0 
         # feat, labels, edges, ids,lengths = batch['feature'], batch['label'], batch['edge'], batch['id'],batch['length']
         for index in batch:
             feature=embedding_layer(dict_train[index][1].to(device))
