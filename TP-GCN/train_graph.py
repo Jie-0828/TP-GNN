@@ -71,13 +71,12 @@ if args.updater=='gru':
 else:
     time_model= nn.GRU(input_size=dimensionality+args.time_dim, hidden_size=hidden_size, num_layers=1, batch_first=True).to(device)
 classification = Classification(hidden_size, num_labels).to(device) # Create a classifier
+embedding_layer=nn.Linear(dimensionality, dimensionality)
 
 #load datasets
-train_dataset = DealDataset(list_train,dimensionality,args.time_dim,args.updater)
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True,collate_fn=collate_func)
-# train_loader = DataLoader(train_dataset, batch_size=batch_size, num_workers=0, shuffle=True, collate_fn=collate_func)
+dict_train=load_Dataset(list_train)
 
-models = [model_time, classification,time_model]
+models = [model_time, classification,time_model,embedding_layer]
 params = []
 for model in models:
     for param in model.parameters():
@@ -92,17 +91,16 @@ print('Model with Supervised Learning')
 for epoch in range(args.n_epoch):
     time.sleep(0.0001)
     print('----------------------EPOCH %d-----------------------' % epoch)
-    model_time, classification, loss, time_model = train_model(train_loader,model_time, classification, optimizer,
+    model_time, classification, loss, time_model = train_model(dict_train,model_time, classification,embedding_layer, optimizer,
                                                               time_model, edge_agg, hidden_size, device)
     print('loss:', loss/len(list_train))
     f.write(str(epoch)+' epoch----'+str(loss.data/len(list_train))+'\n')
 
 # Testing
 print('Test Start')
-test_dataset = DealDataset(list_test,dimensionality,args.time_dim,args.updater)
-test_loader = DataLoader(test_dataset, batch_size=batch_size, num_workers=0, shuffle=True, collate_fn=collate_func)
+dict_test=load_Dataset(list_test)
 
-predicts_test_all,labels_test_all,predicts_socre_all = evaluate(test_loader,model_time, classification,time_model, edge_agg, device, hidden_size)
+predicts_test_all,labels_test_all,predicts_socre_all = evaluate(dict_test,model_time, classification,time_model,embedding_layer, edge_agg, device, hidden_size)
 
 labels = np.array(labels_test_all)
 print(labels)
