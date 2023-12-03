@@ -92,7 +92,7 @@ for epoch in range(args.n_epoch):
     time.sleep(0.0001)
     print('----------------------EPOCH %d-----------------------' % epoch)
     model_time, classification, loss, time_model = train_model(dict_train,model_time, classification,embedding_layer, optimizer,
-                                                              time_model, edge_agg, hidden_size, device)
+                                                              time_model, edge_agg, hidden_size, device,models)
     print('loss:', loss/len(list_train))
     f.write(str(epoch)+' epoch----'+str(loss.data/len(list_train))+'\n')
 
