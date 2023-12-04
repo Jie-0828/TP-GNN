@@ -44,8 +44,7 @@ def load_Dataset(file_list):
         for edge in list_edge:  # get edge information
             edge = edge.strip('\n')
             pair = edge.split(",")[0]
-            # order = edge.split(",")[1].split(';')[0]
-            timestamed = edge.split(",")[1].split(';')[1]
+            timestamed = edge.split(",")[1]
             left = node_map[id + pair.strip().split("<-")[1]]
             right = node_map[id + pair.strip().split("<-")[0]]
             if int(timestamed) not in dict_edge:
