@@ -73,3 +73,7 @@ optional arguments:
   --divide                                   the ratio of training sets
   --updater                                  message passing way of temporal propagation
 ```
+
+#### Cite
+L. Jie et al., "TP-GNN: Continuous Dynamic Graph Neural Network for Graph Classification" 2024 IEEE 40th International Conference on Data Engineering (ICDE), Utrecht, Netherland, 2024, 
+keywords: {Dynamic graph neural networks, Dynamic networks, Dynamic graphs, Graph classification},
